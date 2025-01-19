@@ -4,7 +4,7 @@ This script helps you search for job postings related to DevOps roles and intern
 
 ---
 
-## Features
+# Features
 
 - Searches for tweets containing keywords like "DevOps," "Engineer," "Internship," "Junior," "Fresher," "Hiring," and "Entry Level."
 - Filters out retweets programmatically to show only original tweets.
@@ -13,7 +13,7 @@ This script helps you search for job postings related to DevOps roles and intern
 
 ---
 
-## Prerequisites
+# Prerequisites
 
 1. **Python Environment**: Install Python 3.7 or higher.
 2. **Tweepy Library**: Install the Tweepy library for interacting with the Twitter API.
@@ -22,7 +22,7 @@ This script helps you search for job postings related to DevOps roles and intern
 
 ---
 
-## Setup Instructions
+# Setup Instructions
 
 1. **Clone the Repository**:
    ```bash
@@ -30,26 +30,38 @@ This script helps you search for job postings related to DevOps roles and intern
    cd jobify
    ```
 
-2. **Install Dependencies**:
+2. **Create a Virtual Environment**:
+   - On Windows:
+     ```bash
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+
+3. **Install Dependencies**:
    ```bash
    pip install tweepy python-dotenv
    ```
 
-3. **Set Up Environment Variables**:
+4. **Set Up Environment Variables**:
    - Create a `.env` file in the project directory.
    - Add your Twitter Bearer Token to the `.env` file:
      ```plaintext
      TWITTER_BEARER_TOKEN=your_twitter_bearer_token
      ```
 
-4. **Run the Script**:
+5. **Run the Script**:
    ```bash
    python job.py
    ```
 
 ---
 
-## Script Workflow
+# Script Workflow
 
 1. **Load Configuration**:
    The script uses the `dotenv` library to load the Twitter Bearer Token from the `.env` file.
@@ -74,7 +86,7 @@ This script helps you search for job postings related to DevOps roles and intern
 
 ---
 
-## Example Output
+# Example Output
 
 When run successfully, the script outputs something like this:
 
@@ -96,7 +108,7 @@ Found 2 relevant tweets:
 
 ---
 
-## Customization
+# Customization
 
 1. **Time Frame**:
    - Adjust the `start_time` in the `search_twitter_jobs_v2` function to change the time window.
@@ -112,7 +124,7 @@ Found 2 relevant tweets:
 
 ---
 
-## Troubleshooting
+# Troubleshooting
 
 1. **Rate Limits**:
    - If you encounter a rate limit error, the script will automatically wait and retry.
@@ -125,19 +137,19 @@ Found 2 relevant tweets:
 
 ---
 
-## License
+# License
 
 This project is open-source and available under the MIT License. Feel free to modify and use it for your own purposes.
 
 ---
 
-## Contributions
+# Contributions
 
 Contributions are welcome! If you have suggestions or enhancements, feel free to submit a pull request.
 
 ---
 
-## Disclaimer
+# Disclaimer
 
 This script is for educational purposes only. Ensure compliance with Twitter's API usage policies when using this script.
 
