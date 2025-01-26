@@ -20,7 +20,7 @@ def search_twitter_jobs_v2(query):
         response = client.search_recent_tweets(
             query=query,
             start_time=start_time,
-            max_results=20,  # Adjust based on your API plan
+            max_results=5,  # Adjust based on your API plan
             tweet_fields=['created_at', 'text', 'author_id', 'lang']
         )
         
