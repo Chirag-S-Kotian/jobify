@@ -20,7 +20,7 @@ def search_twitter_jobs_v2(query):
         response = client.search_recent_tweets(
             query=query,
             start_time=start_time,
-            max_results=5,  # Adjust based on your API plan
+            max_results=10,  # Adjust based on your API plan
             tweet_fields=['created_at', 'text', 'author_id', 'lang']
         )
         
@@ -50,6 +50,12 @@ def search_twitter_jobs_v2(query):
         return search_twitter_jobs_v2(query)
     except tweepy.BadRequest as e:
         print(f"Bad Request Error: {e}")
+        return []
+    except tweepy.TweepError as e:
+        print(f"Tweepy Error: {e}")
+        return []
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
         return []
 
 # Main function
