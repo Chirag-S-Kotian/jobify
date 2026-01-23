@@ -3,6 +3,7 @@
 
 
 
+
 # Job Search Script Using Twitter API
 
 This script helps you search for job postings related to DevOps roles and internships posted on Twitter within a specified time frame (default is the last 24 hours). It uses the Twitter API v2 via the Tweepy library.
